@@ -51,7 +51,7 @@ class ShortPixelImageOptimizer extends Compatibility {
   public function shortPixelJS() {
     $upload_dir = wp_upload_dir();
 
-    wp_enqueue_script('stateless-short-pixel', ud_get_stateless_media()->path('lib/classes/compatibility/js/shortpixel.js', 'url'), array('shortpixel'), '', true);
+    wp_enqueue_script('stateless-short-pixel', plugins_url( 'js/shortpixel.js', __FILE__ ), array('shortpixel'), '', true);
 
     $image_host = ud_get_stateless_media()->get_gs_host();
     $bucketLink = apply_filters('wp_stateless_bucket_link', $image_host);
